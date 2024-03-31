@@ -29,11 +29,14 @@ nav ul ul.dropdown {
     display: none;
     position: absolute;
     background-color: #333;
-    min-width: 6.25rem; 
+    min-width: 100%; 
+    top: 100%; 
+    z-index: 999; 
 }
 
 nav ul ul.dropdown li {
     display: block;
+    white-space: nowrap; 
 }
 
 nav ul ul.dropdown li a {
@@ -51,8 +54,8 @@ nav ul ul.dropdown li:hover {
    font-family: Brush Script MT;  
    font-size: 3.125rem; 
    text-align: center;
-   padding-top: 2.5rem; 
-   padding-bottom: 2.5rem; 
+   padding-top: 3.7rem; 
+   padding-bottom: 1rem; 
    position: relative;
 }
 
@@ -96,9 +99,4 @@ h1 {
     background-repeat: no-repeat;
     background-size: contain;
   }
-
-
-#userguide {
-
-}
 
