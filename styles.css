@@ -58,7 +58,7 @@ nav ul ul.dropdown li:hover {
 
 
 .container {
-    max-width: 50rem; 
+    max-width: 40rem; 
     margin: 0 auto;
     padding: 1.25rem; 
     text-align: justify;
@@ -67,7 +67,7 @@ nav ul ul.dropdown li:hover {
 
 
 h1 {
-    font-size: 1.5rem; 
+    font-size: 1.75rem; 
     color: #333;
     margin-bottom: 1.25rem; 
     text-align: center;
@@ -81,14 +81,24 @@ h1 {
     color: #555;
 }
 
-#mathImage {
+/* #mathImage {
     position: absolute; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-}
+} */
+
+.parallax {
+    background-image: url("Mathematics.jpeg");
+    min-height: 31.25rem;
+    background-attachment: fixed;
+    background-position: center bottom; 
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
 
 #userguide {
-    margin-top: 200px; 
+
 }
 
