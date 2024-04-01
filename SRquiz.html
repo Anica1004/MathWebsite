@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SquareRoot Quiz</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="SRquiz.css">
+    
+</head>
+<body>
+    <div id="navigation"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#navigation").load("navigation.html");
+        });
+    </script>
+
+    <h1 id = "title">Square Root Quiz</h1>
+
+    <div id="quiz">
+
+        <div class="question">
+            <h3>Question 1:</h3>
+            <p>What is the square root of 25?</p>
+            <ul>
+                <li><input type="radio" name="q1" value="a"> 3</li>
+                <li><input type="radio" name="q1" value="b"> 5</li>
+                <li><input type="radio" name="q1" value="c"> 7</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h3>Question 2:</h3>
+            <p>What is the square root of 121?</p>
+            <ul>
+                <li><input type="radio" name="q2" value="a"> 9</li>
+                <li><input type="radio" name="q2" value="b"> 11</li>
+                <li><input type="radio" name="q2" value="c"> 13</li>
+            </ul>
+        </div>
+
+
+        <div class="question">
+            <h3>Question 3:</h3>
+            <p>Is \(\sqrt{72}\) a perfect square?</p>
+            <ul>
+                <li><input type="radio" name="q2" value="True"> True</li>
+                <li><input type="radio" name="q2" value="False"> False</li>
+            </ul>
+        </div>
+
+
+
+        <div class="question">
+            <h3>Question 4:</h3>
+            <p>Solve the equation \(x^2 = 36\)</p>
+            <label for="q4">x =</label>
+            <!-- <div class="dropdown"> -->
+
+
+                <select id="operator" name="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="both">\(\pm\)</option>
+                </select>
+
+
+            <!-- </div> -->
+            <input type="number" id="q4" name="q4" placeholder="Enter value">
+        </div>
+
+
+        <div class="question">
+            <h3>Question 5:</h3>
+            <p>Is the following statement true?: \( \frac{ \sqrt{a}}{ \sqrt{b}}  =  \sqrt{\frac{a}{b}}\) </p>
+            <ul>
+                <li><input type="radio" name="q5" value="True"> True</li>
+                <li><input type="radio" name="q5" value="False"> False</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h3>Question 6:</h3>
+            <p>Is the following statement true?: \(\sqrt{ab} =  \sqrt{a}  × \sqrt{b}\) </p>
+            <ul>
+                <li><input type="radio" name="q6" value="True"> True</li>
+                <li><input type="radio" name="q6" value="False"> False</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h3>Question 7:</h3>
+            <p>Is the following statement true?: \(\sqrt{a + b} = \sqrt{a} + \sqrt{b}\) </p>
+            <ul>
+                <li><input type="radio" name="q7" value="True"> True</li>
+                <li><input type="radio" name="q7" value="False"> False</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h3>Question 8: </h3>
+                <p> rectangle has a length twice as long as it is wide, and an area of 32 \(m^2\)
+                 Determine the length and the width of the rectangle.</p>
+
+                 <div class="input-group">
+                    <label for="q8a">Length: </label>
+                    <input type="number" id="q8a" name="q8a" placeholder="Enter value">
+                    <select name="unit1" id="unit1">
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                        <option value="km">km</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="q8b">Width: </label>
+                    <input type="number" id="q8b" name="q8b" placeholder="Enter value">
+                    <select name="unit2" id="unit2">
+                        <option value="cm">cm</option>
+                        <option value="m" selected>m</option>
+                        <option value="km">km</option>
+                    </select>
+                </div>
+        </div>
+
+        
+
+        <button onclick="submitQuiz()">Submit Quiz</button>
+    </div>
+        
+
+
+    
+</body>
+</html>
