@@ -1,0 +1,110 @@
+#title{
+    font-size: 1.75rem; 
+    color: rgb(88,88,88); 
+    margin-bottom: 1.25rem; 
+    margin-top: 4.5rem; 
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 1.25rem; 
+    color: #333;
+    margin-bottom: 1.25rem; 
+    margin-top: 5rem; 
+    text-align: center;
+}
+
+.subsubtitle{
+    font-size: 1.20rem; 
+    color: #333;
+    margin-bottom: 1.25rem; 
+    margin-top: 5rem; 
+    text-align: center left;
+}
+
+.example{
+    font-size: 1rem; 
+    color: #333;
+    margin-bottom: 3rem; 
+    margin-top: 5rem; 
+    text-align: center;
+
+}
+
+.container {
+    max-width: 50rem; 
+    margin: 0 auto;
+    padding: 1.25rem; 
+     /* text-align: justify; */ 
+ text-align: left; 
+    position: relative;
+}
+
+.solution{
+    font-size: 1rem; 
+    line-height: 1.6;
+    color: #555;
+    margin-left: 5rem;
+}
+
+.bold{
+    font-weight: bold;
+
+}
+
+.def{
+margin-top: 3rem; 
+margin-bottom: 2rem; 
+
+}
+
+
+
+.sticky-note-yellow {
+    position: relative;
+    background-color: #feff9c; 
+    padding: 2%;
+    width: 80%;
+    max-width: 30%;
+    border-radius: 10px;
+    /* box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3); */
+
+    box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; 
+}
+
+.sticky-note-yellow p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+.sticky-note-yellow::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 3rem;
+    height: 1rem; 
+    background-color: #7AFCFF; 
+    border-radius: 3px; 
+    border-top: none; 
+    z-index: 1; 
+}
+
+.sticky-note-yellow::after {
+    content: '';
+    position: absolute;
+    top: -0.5rem; /* Adjust distance from the top */
+    left: 50%; /* Position in the middle horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 3rem; /* Adjust width of the tape */
+    height: 1rem; /* Adjust height of the tape */
+    background-color: #7AFCFF; /* Color of the tape */
+    /* border: 0.05px solid #000; /* Border for tape effect */
+    border-radius: 3px; 
+    border-left: none; /* Hide left border */
+    border-bottom: none; /* Hide bottom border */
+    z-index: 1; /* Ensure tape is above the sticky note content */
+}
