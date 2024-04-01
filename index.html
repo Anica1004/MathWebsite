@@ -6,45 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Notes</a>
-                <ul class = "dropdown">
-                    <li><a href="../notesSR.html">Square Roots, Powers, and Exponent Laws</a></li>
-                    <li><a href="#">Finance</a></li>
-                    <li><a href="#">Rational Numbers</a></li>
-                    <li><a href="#">Linear Relations</a></li>
-                    <li><a href="#">Polynomials</a></li>
-                    <li><a href="#">Linear Equations</a></li>
-                    <li><a href="#">Similarities and Scale Factors</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Topic Videos</a>
-            <li><a href="#">Quiz</a>
-                <ul class = "dropdown">
-                    <li><a href="#">Square Roots, Powers, and Exponent Laws</a></li>
-                    <li><a href="#">Finance</a></li>
-                    <li><a href="#">Rational Numbers</a></li>
-                    <li><a href="#">Linear Relations</a></li>
-                    <li><a href="#">Polynomials</a></li>
-                    <li><a href="#">Linear Equations</a></li>
-                    <li><a href="#">Similarities and Scale Factors</a></li>
-                </ul>
-            </li>   
-            </li>
-            <li><a href="#">Homework Submission</a>
-            <li><a href="#">Q&A</a>
-        </ul>
-    </nav>
-
+    <div id="navigation"></div>
     <h1 id = "title"> Teacher Mok</h1>
     <div class="parallax"></div>
    
-    <!-- <img id = "mathImage" src="Mathematics.jpeg" alt="Image of Mathematics"> -->
-
     <div class="container" id = "userguide">
         <h1>User Guide</h1>
         <div class="userGuide">
@@ -75,7 +43,12 @@
         </div>
     </div>
 
-   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 
 </body>
 </html>
