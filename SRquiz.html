@@ -9,6 +9,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="SRquiz.css">
+    <script src="SRquiz.js"></script>
     
 </head>
 <body>
@@ -22,7 +23,7 @@
 
     <h1 id = "title">Square Root Quiz</h1>
 
-    <div id="quiz">
+    <form id="quiz" onsubmit="return submitQuiz();">
 
         <div class="question">
             <h3>Question 1:</h3>
@@ -32,6 +33,7 @@
                 <li><input type="radio" name="q1" value="b"> 5</li>
                 <li><input type="radio" name="q1" value="c"> 7</li>
             </ul>
+            <span id="q1-result"></span>
         </div>
 
         <div class="question">
@@ -42,6 +44,7 @@
                 <li><input type="radio" name="q2" value="b"> 11</li>
                 <li><input type="radio" name="q2" value="c"> 13</li>
             </ul>
+            <span id="q2-result"></span>
         </div>
 
 
@@ -49,9 +52,10 @@
             <h3>Question 3:</h3>
             <p>Is \(\sqrt{72}\) a perfect square?</p>
             <ul>
-                <li><input type="radio" name="q2" value="True"> True</li>
-                <li><input type="radio" name="q2" value="False"> False</li>
+                <li><input type="radio" name="q3" value="True"> True</li>
+                <li><input type="radio" name="q3" value="False"> False</li>
             </ul>
+            <span id="q3-result"></span>
         </div>
 
 
@@ -60,18 +64,13 @@
             <h3>Question 4:</h3>
             <p>Solve the equation \(x^2 = 36\)</p>
             <label for="q4">x =</label>
-            <!-- <div class="dropdown"> -->
-
-
                 <select id="operator" name="operator">
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="both">\(\pm\)</option>
                 </select>
-
-
-            <!-- </div> -->
             <input type="number" id="q4" name="q4" placeholder="Enter value">
+            <span id="q4-result"></span>
         </div>
 
 
@@ -82,6 +81,7 @@
                 <li><input type="radio" name="q5" value="True"> True</li>
                 <li><input type="radio" name="q5" value="False"> False</li>
             </ul>
+            <span id="q5-result"></span>
         </div>
 
         <div class="question">
@@ -91,6 +91,7 @@
                 <li><input type="radio" name="q6" value="True"> True</li>
                 <li><input type="radio" name="q6" value="False"> False</li>
             </ul>
+            <span id="q6-result"></span>
         </div>
 
         <div class="question">
@@ -100,11 +101,12 @@
                 <li><input type="radio" name="q7" value="True"> True</li>
                 <li><input type="radio" name="q7" value="False"> False</li>
             </ul>
+            <span id="q7-result"></span>
         </div>
 
         <div class="question">
             <h3>Question 8: </h3>
-                <p> rectangle has a length twice as long as it is wide, and an area of 32 \(m^2\)
+                <p>A rectangle has a length twice as long as it is wide, and an area of 32 \(m^2\)
                  Determine the length and the width of the rectangle.</p>
 
                  <div class="input-group">
@@ -125,12 +127,12 @@
                         <option value="km">km</option>
                     </select>
                 </div>
+                <span id="q8-result"></span>
         </div>
 
         
-
-        <button onclick="submitQuiz()">Submit Quiz</button>
-    </div>
+        <button class="button-1" type="submit">Submit Quiz</button>
+    </form>
         
 
 
