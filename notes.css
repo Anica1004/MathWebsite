@@ -35,7 +35,6 @@
     max-width: 50rem; 
     margin: 0 auto;
     padding: 1.25rem; 
-     /* text-align: justify; */ 
  text-align: left; 
     position: relative;
 }
@@ -87,24 +86,20 @@ margin-bottom: 2rem;
     transform: translateX(-50%); 
     width: 3rem;
     height: 1rem; 
-    background-color: #7AFCFF; 
+    background-color: rgba(122, 252, 255, 0.45);
     border-radius: 3px; 
-    border-top: none; 
     z-index: 1; 
 }
 
 .sticky-note-yellow::after {
     content: '';
     position: absolute;
-    top: -0.5rem; /* Adjust distance from the top */
-    left: 50%; /* Position in the middle horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    width: 3rem; /* Adjust width of the tape */
-    height: 1rem; /* Adjust height of the tape */
-    background-color: #7AFCFF; /* Color of the tape */
-    /* border: 0.05px solid #000; /* Border for tape effect */
+    top: -0.5rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 3rem; 
+    height: 1rem; 
+    background-color: rgba(122, 252, 255, 0.45); 
     border-radius: 3px; 
-    border-left: none; /* Hide left border */
-    border-bottom: none; /* Hide bottom border */
-    z-index: 1; /* Ensure tape is above the sticky note content */
+    z-index: 1; 
 }
