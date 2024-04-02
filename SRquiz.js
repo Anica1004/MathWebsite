@@ -237,7 +237,6 @@ function getTotalQuestions() {
 
 
 function submitAndResetQuiz() {
-    // Store the answers before resetting the form
     var answers = {
         q1: document.querySelector('input[name="q1"]:checked').value,
         q2: document.querySelector('input[name="q2"]:checked').value,
@@ -256,17 +255,13 @@ function submitAndResetQuiz() {
     document.getElementById("quiz").submit();
     resetQuiz();
 
-    // You can use the 'answers' object to do something with the submitted answers
+    // Use 'answers' object to do something with the submitted answers if you make a backend later
 }
 
-// Define the function to reset the form
 function resetQuiz() {
-    // Reset the form
     document.getElementById("quiz").reset();
 }
 
-// Attach the event listener directly to the redo button
 document.getElementById("redoButton").addEventListener("click", function() {
-    // Submit the form and reset it
     submitAndResetQuiz();
 });
