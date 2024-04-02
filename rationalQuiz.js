@@ -55,7 +55,8 @@ function calculateAndShowScore() {
 }
 
 function calculateScore() {
-     score = checkQuestion1() + checkQuestion2() + checkQuestion3() + checkQuestion4() + checkQuestion5() + checkQuestion6() + checkQuestion7() + checkQuestion8();
+    //  score = checkQuestion1() + checkQuestion2() + checkQuestion3() + checkQuestion4() + checkQuestion5() + checkQuestion6() + checkQuestion7() + checkQuestion8();
+    score = checkQuestion1(); 
     return score; 
 }
 
@@ -92,8 +93,111 @@ function checkQuestion1() {
     }
 }
 
+
+function checkQuestion2() {
+    var correctAnswer = 'a'; 
+    var userAnswer = document.querySelector('input[name="q2"]:checked').value;
+
+    var resultSpan = document.getElementById('q2-result');
+
+    // Update the result display based on correctness
+    if (userAnswer === correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+
+function checkQuestion3() {
+    var correctAnswer = 'd'; 
+    var userAnswer = document.querySelector('input[name="q3"]:checked').value;
+
+    var resultSpan = document.getElementById('q3-result');
+
+    // Update the result display based on correctness
+    if (userAnswer === correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+// this one is a input one (number) could be decimal or fraction tho..
+function checkQuestion4() {
+    var correctAnswer = 21/16; 
+    var userAnswer = document.querySelector('input[name="q4"]').value;
+    var resultSpan = document.getElementById('q4-result');
+
+    // Update the result display based on correctness
+    if (userAnswer == correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+
+
+
+
+
 // create a array comparing function
 function arraysAreEqual(arr1, arr2) {
     if (arr1.length !== arr2.length) return false;
     return arr1.every((value, index) => value === arr2[index]);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function submitAndResetQuiz() {
+    var answers = {
+        q1: getCheckedCheckboxValues('q1'),
+        q2: document.querySelector('input[name="q2"]:checked').value,
+        q3: document.querySelector('input[name="q3"]:checked').value,
+        q4: document.getElementById('q4').value,
+        q5: document.getElementById('q5').value,
+        q6: document.getElementById('q6').value,
+        q7: document.getElementById('q7').value,
+        q8: document.getElementById('q8').value,
+        q9: document.getElementById('q9').value,
+        q10: document.getElementById('q10').value,
+        q11: document.querySelector('input[name="q11"]:checked').value
+    };
+
+    
+    document.getElementById("quiz").submit();
+    resetQuiz();
+
+    // Use 'answers' object to do something with the submitted answers if you make a backend later
+}
+
+function resetQuiz() {
+    document.getElementById("quiz").reset();
+}
+
+document.getElementById("redoButton").addEventListener("click", function() {
+    submitAndResetQuiz();
+});
