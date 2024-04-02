@@ -54,10 +54,10 @@ function calculateAndShowScore() {
     alert("Your score is: " + score + "/" + getTotalQuestions());
 }
 
-
-
-
-
+function calculateScore() {
+     score = checkQuestion1() + checkQuestion2() + checkQuestion3() + checkQuestion4() + checkQuestion5() + checkQuestion6() + checkQuestion7() + checkQuestion8();
+    return score; 
+}
 
 
 
@@ -65,3 +65,35 @@ function getTotalQuestions() {
     return document.querySelectorAll('.question').length;
 }
 
+
+function checkQuestion1() {
+    var correctAnswers = ['1', '0.75', '3/4']; 
+    var userSelectedValues = []; 
+    
+    // Get all checked checkboxes for question 1
+    var checkboxes = document.querySelectorAll('input[type="checkbox"][name="q1"]:checked');
+
+    checkboxes.forEach(function(checkbox) {
+        userSelectedValues.push(checkbox.value);
+    });
+    
+    // Get the result span element
+    var resultSpan = document.getElementById('q1-result');
+    
+    // Check if the user-selected values match the correct answers
+    if (arraysAreEqual(userSelectedValues, correctAnswers)) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green';
+        return 1; // Return 1 for correct answer
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red';
+        return 0; // Return 0 for wrong answer
+    }
+}
+
+// create a array comparing function
+function arraysAreEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    return arr1.every((value, index) => value === arr2[index]);
+}
