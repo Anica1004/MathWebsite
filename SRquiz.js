@@ -1,9 +1,5 @@
-
-
-
 function submitQuiz() {
     var radioAnswers = document.querySelectorAll('input[type="radio"]:checked');
-    
     var shortAnswerInputs = document.querySelectorAll('input[type="number"]');
     var selectAnswers = document.querySelectorAll('select');
     var emptyShortAnswer = false;
@@ -47,16 +43,10 @@ function submitQuiz() {
         if (isConfirmed) {
             calculateAndShowScore();
             document.getElementById("redoButton").style.display = "inline";
-            return false; 
         }
         return false;
     }
 }
-
-
-document.getElementById("quiz").addEventListener("submit", function(event) {
-    event.preventDefault(); // This prevents the form from submitting normally
-  });
 
 
 
@@ -87,6 +77,7 @@ function checkQuestion1() {
     } else {
         resultSpan.textContent = '❌ Wrong';
         resultSpan.style.color = 'red'; 
+        return 0; 
 }
 }
 
@@ -183,6 +174,7 @@ function checkQuestion6() {
     } else {
         resultSpan.textContent = '❌ Wrong';
         resultSpan.style.color = 'red'; 
+        return 0; 
     }
 }
 
@@ -239,6 +231,42 @@ function getTotalQuestions() {
 }
 
 
-document.getElementById("redoButton").addEventListener("click", function() {
+
+
+
+
+
+function submitAndResetQuiz() {
+    // Store the answers before resetting the form
+    var answers = {
+        q1: document.querySelector('input[name="q1"]:checked').value,
+        q2: document.querySelector('input[name="q2"]:checked').value,
+        q3: document.querySelector('input[name="q3"]:checked').value,
+        q4: document.querySelector('input[name="q4"]').value,
+        q5: document.querySelector('input[name="q5"]:checked').value,
+        q6: document.querySelector('input[name="q6"]:checked').value,
+        q7: document.querySelector('input[name="q7"]:checked').value,
+        q8a: document.querySelector('input[name="q8a"]').value,
+        q8b: document.querySelector('input[name="q8b"]').value,
+        unit1: document.querySelector('select[name="unit1"]').value,
+        unit2: document.querySelector('select[name="unit2"]').value,
+        operator: document.querySelector('select[name="operator"]').value
+    };
+    
     document.getElementById("quiz").submit();
+    resetQuiz();
+
+    // You can use the 'answers' object to do something with the submitted answers
+}
+
+// Define the function to reset the form
+function resetQuiz() {
+    // Reset the form
+    document.getElementById("quiz").reset();
+}
+
+// Attach the event listener directly to the redo button
+document.getElementById("redoButton").addEventListener("click", function() {
+    // Submit the form and reset it
+    submitAndResetQuiz();
 });
