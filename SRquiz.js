@@ -1,3 +1,6 @@
+
+
+
 function submitQuiz() {
     var radioAnswers = document.querySelectorAll('input[type="radio"]:checked');
     
@@ -43,7 +46,8 @@ function submitQuiz() {
         var isConfirmed = confirm("Are you sure you want to submit the quiz?");
         if (isConfirmed) {
             calculateAndShowScore();
-            document.getElementById("quiz").submit();
+            document.getElementById("redoButton").style.display = "inline";
+            return false; 
         }
         return false;
     }
@@ -233,3 +237,8 @@ function checkQuestion8() {
 function getTotalQuestions() {
     return document.querySelectorAll('.question').length;
 }
+
+
+document.getElementById("redoButton").addEventListener("click", function() {
+    document.getElementById("quiz").submit();
+});
