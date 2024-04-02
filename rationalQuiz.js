@@ -149,6 +149,41 @@ function checkQuestion4() {
     }
 }
 
+// this one is a input one (number) could be decimal or fraction tho..
+function checkQuestion5() {
+    var correctAnswer = 28/48; 
+    var userAnswer = document.querySelector('input[name="q5"]').value;
+    var resultSpan = document.getElementById('q5-result');
+
+    // Update the result display based on correctness
+    if (userAnswer == correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+// this one is a input one (number) could be decimal or fraction tho..
+function checkQuestion6() {
+    var correctAnswer = 19/40; // or 0.475
+    var userAnswer = document.querySelector('input[name="q5"]').value;
+    var resultSpan = document.getElementById('q6-result');
+
+    // Update the result display based on correctness
+    if (userAnswer == correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
 
 
 
