@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="powersQuiz.js"></script>
+</head>
+<body>
+    <div id="navigation"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#navigation").load("navigation.html");
+        });
+    </script>
+
+<h1 id = "title">Powers and Exponential Laws Quiz</h1>
+
+<form id="quiz" onsubmit="return submitQuiz();">
+
+    <div class="question">
+        <h3>Question 1:</h3>
+        <p> Evaluate: \( (-3)^4 \)
+        </p>
+        <input type="number" id="q1" name="q1" placeholder="Enter value">
+        <span id="q1-result"></span>
+    </div>
+
+    <div class="question">
+        <h3>Question 2:</h3>
+        <p> Evaluate: \( -(3)^4 \)
+        </p>
+        <input type="number" id="q2" name="q2" placeholder="Enter value">
+        <span id="q2-result"></span>
+    </div>
+
+
+    <div class="question">
+        <h3>Question 3:</h3>
+        <p> Evaluate: \( -3^4\)
+        </p>
+        <input type="number" id="q3" name="q3" placeholder="Enter value">
+        <span id="q3-result"></span>
+    </div>
+
+
+
+    <div class="question">
+        <h3>Question 4:</h3>
+        <p> Evaluate: \(-(-3)^4\)
+        </p>
+        <input type="number" id="q4" name="q4" placeholder="Enter value">
+        <span id="q4-result"></span>
+    </div>
+
+    <div class="question">
+        <h3>Question 5:</h3>
+        <p> Evaluate: \((-3)^{10} \div (-3)^8\)
+        </p>
+        <input type="number" id="q5" name="q5" placeholder="Enter value">
+        <span id="q5-result"></span>
+    </div>
+
+    <div class="question">
+        <h3>Question 6:</h3>
+        <p> Evaluate: \( ((-8)^{2} \div (100^8 \times 2^{10000}))^{0} \)
+        </p>
+        <input type="number" id="q6" name="q6" placeholder="Enter value">
+        <span id="q6-result"></span>
+    </div>
+
+    <div class="question">
+        <h3>Question 7:</h3>
+        <p> Evaluate: \(4^2 - 8 \div 2 + (-2^2) \)
+        </p>
+        <input type="number" id="q7" name="q7" placeholder="Enter value">
+        <span id="q7-result"></span>
+    </div>
+
+    <div class="question">
+        <h3>Question 8:</h3>
+        <p> Evaluate: \( \frac{(2)^6(2)^2 - 2^8}{(-1 + 2^2)^5} \)
+        </p>
+        <input type="number" id="q8" name="q8" placeholder="Enter value">
+        <span id="q8-result"></span>
+    </div>
+
+    <div class="question">
+        <h3>Question 9:</h3>
+        <p> A colony of bacteria triples every hour. If there are 20 bacteria now, how many will there be after 6 hours?
+        </p>
+        <input type="number" id="q9" name="q9" placeholder="Enter value">
+        <label>Bacteria</label>
+        <span id="q9-result"></span>
+    </div>
+
+ 
+
+
+
+
+
+
+
+    <button class="button-1" type="submit">Submit Quiz</button>
+</form>
+
+<form class = "redobutton-container">
+    <button id="redoButton" class = "redobutton" style="display: none;">Redo the Quiz</button>
+</form>
+
+
+
+
+
+    
+</body>
+</html>
