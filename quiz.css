@@ -8,7 +8,7 @@
 
 
 #quiz {
-    max-width: 100%; 
+    max-width: 60%; 
     margin: 0 auto;
 }
 
@@ -43,7 +43,7 @@
 }
 
 
-.question input[type="radio"] {
+.question input[type="radio"]{
     margin-right: 2%; 
 }
 
@@ -106,7 +106,6 @@ select {
 }
 
 
-
 input[type="number"].unanswered, select.unanswered {
     border: 1px solid red; 
 }
@@ -117,3 +116,11 @@ input[type="radio"].unanswered  {
 .unanswered {
     border: 2px solid red; /* Example: Red border */
 }
+
+
+
+.checkbox-list li {
+    display: inline-block;
+    margin-right: 2rem; /* Adjust spacing between checkboxes */
+}
+

@@ -43,12 +43,16 @@ function submitQuiz() {
         var isConfirmed = confirm("Are you sure you want to submit the quiz?");
         if (isConfirmed) {
             calculateAndShowScore();
-            // document.getElementById("quiz").submit();
+            document.getElementById("quiz").submit();
         }
         return false;
     }
 }
 
+
+document.getElementById("quiz").addEventListener("submit", function(event) {
+    event.preventDefault(); // This prevents the form from submitting normally
+  });
 
 
 
