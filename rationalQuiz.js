@@ -34,7 +34,7 @@ function submitQuiz() {
 });
 
 
-    if (radioAnswers.length != 3 || emptyShortAnswer || checkboxAnswers.length < 1) {
+    if (radioAnswers.length != 4 || emptyShortAnswer || checkboxAnswers.length < 1) {
         alert("Please answer all questions!");
         return false;
     } else {
@@ -55,8 +55,9 @@ function calculateAndShowScore() {
 }
 
 function calculateScore() {
-    //  score = checkQuestion1() + checkQuestion2() + checkQuestion3() + checkQuestion4() + checkQuestion5() + checkQuestion6() + checkQuestion7() + checkQuestion8();
-    score = checkQuestion1(); 
+     score = checkQuestion1() + checkQuestion2() + checkQuestion3() +
+      checkQuestion4() + checkQuestion5() + checkQuestion6() + checkQuestion7() + checkQuestion8()
+      +  checkQuestion9() + checkQuestion10() + checkQuestion11(); 
     return score; 
 }
 
@@ -133,7 +134,7 @@ function checkQuestion3() {
 
 // this one is a input one (number) could be decimal or fraction tho..
 function checkQuestion4() {
-    var correctAnswer = 21/16; 
+    var correctAnswer = 14; 
     var userAnswer = document.querySelector('input[name="q4"]').value;
     var resultSpan = document.getElementById('q4-result');
 
@@ -151,7 +152,7 @@ function checkQuestion4() {
 
 // this one is a input one (number) could be decimal or fraction tho..
 function checkQuestion5() {
-    var correctAnswer = 28/48; 
+    var correctAnswer = 1; 
     var userAnswer = document.querySelector('input[name="q5"]').value;
     var resultSpan = document.getElementById('q5-result');
 
@@ -169,8 +170,8 @@ function checkQuestion5() {
 
 // this one is a input one (number) could be decimal or fraction tho..
 function checkQuestion6() {
-    var correctAnswer = 19/40; // or 0.475
-    var userAnswer = document.querySelector('input[name="q5"]').value;
+    var correctAnswer = 1; // or 0.475
+    var userAnswer = document.querySelector('input[name="q6"]').value;
     var resultSpan = document.getElementById('q6-result');
 
     // Update the result display based on correctness
@@ -186,6 +187,93 @@ function checkQuestion6() {
 }
 
 
+function checkQuestion7() {
+    var correctAnswer = "a";
+    var userAnswer = document.querySelector('input[name="q7"]:checked').value;
+    var resultSpan = document.getElementById('q7-result');
+
+    // Update the result display based on correctness
+    if (userAnswer === correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+
+function checkQuestion8() {
+    var correctAnswer = 1;
+    var userAnswer = document.querySelector('input[name="q8"]').value;
+    var resultSpan = document.getElementById('q8-result');
+
+    // Update the result display based on correctness
+    if (userAnswer == correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+function checkQuestion9() {
+    var correctAnswer = 5;
+    var userAnswer = document.querySelector('input[name="q9"]').value;
+    var resultSpan = document.getElementById('q9-result');
+
+    // Update the result display based on correctness
+    if (userAnswer == correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+function checkQuestion10() {
+    var correctAnswer = 41;
+    var userAnswer = document.querySelector('input[name="q10"]').value;
+    var resultSpan = document.getElementById('q10-result');
+
+    // Update the result display based on correctness
+    if (userAnswer == correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
+
+function checkQuestion11() {
+    var correctAnswer = 'c'; 
+    var userAnswer = document.querySelector('input[name="q11"]:checked').value;
+    var resultSpan = document.getElementById('q11-result');
+
+    // Update the result display based on correctness
+    if (userAnswer === correctAnswer) {
+        resultSpan.textContent = '✅ Correct';
+        resultSpan.style.color = 'green'; 
+        return 1; 
+    } else {
+        resultSpan.textContent = '❌ Wrong';
+        resultSpan.style.color = 'red'; 
+        return 0; 
+    }
+}
+
 
 
 
@@ -197,7 +285,20 @@ function arraysAreEqual(arr1, arr2) {
 
 
 
+// just refactor it later..
 
+// function markAsCorrect(resultSpan) {
+//     resultSpan.textContent = '✅ Correct';
+//     resultSpan.style.color = 'green'; 
+//     return 1; 
+// }
+
+
+// function markAsIncorrect(resultSpan) {
+//     resultSpan.textContent = '❌ Wrong';
+//     resultSpan.style.color = 'red'; 
+//     return 0; 
+// }
 
 
 
