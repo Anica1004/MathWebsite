@@ -23,7 +23,7 @@
 }
 
 .example{
-    font-size: 1rem; 
+    font-size: 1.13rem; 
     color: #333;
     margin-bottom: 3rem; 
     margin-top: 5rem; 
@@ -40,10 +40,11 @@
 }
 
 .solution{
-    font-size: 1rem; 
+    font-size: 0.90rem; 
     line-height: 1.6;
     color: #555;
     margin-left: 5rem;
+    margin-bottom: 5rem; 
 }
 
 .bold{
@@ -67,7 +68,6 @@ margin-bottom: 2rem;
     max-width: 30%;
     border-radius: 10px;
     /* box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3); */
-
     box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.3);
     margin: 0 auto; 
 }
@@ -103,3 +103,58 @@ margin-bottom: 2rem;
     border-radius: 3px; 
     z-index: 1; 
 }
+
+
+
+.sidenote {
+    position: relative;
+    background-color: var(--note-bg-color, #fde7d6); /* Default background color */
+    padding: 2%;
+    width: 80%;
+    max-width: 30%;
+    border-radius: 10px;
+    box-shadow: 10px 7px 7px rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem; 
+    margin: 0 auto; 
+    margin-left: 3%; 
+    margin-right: 3%; 
+}
+
+.sidenote p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.sidenote::before,
+.sidenote::after {
+    content: '';
+    position: absolute;
+    top: -0.5rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 3rem; 
+    height: 1rem; 
+    background-color: var(--note-marker-color, rgba(249, 211, 163, 0.45)); /* Default marker color */
+    border-radius: 3px; 
+    z-index: 1; 
+}
+
+.sidenote-container {
+    display: flex;
+    justify-content: space-between; /* To evenly distribute side notes */
+    margin-bottom: 1rem; /* Adjust spacing between side notes */
+}
+
+
+.red-note {
+    --note-bg-color: #ffcccc;
+    --note-marker-color: rgba(255, 0, 0, 0.45);
+}
+
+
+.side-note-container {
+    display: flex;
+    justify-content: space-between; /* To evenly distribute side notes */
+    margin-bottom: 1rem; /* Adjust spacing between side notes */
+}
+
