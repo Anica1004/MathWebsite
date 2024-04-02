@@ -11,6 +11,274 @@
     <link rel="stylesheet" href="notes.css">
 </head>
 <body>
+    <div id="navigation"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#navigation").load("navigation.html");
+        });
+    </script>
+       <h1 id = "title">Polynomials</h1>
+       <div class = "container">
+        <h2 class = "subtitle">4. Polynomials</h2>
+        <ul class = "subsubtitle">4.1 What are Polynomials?</ul>
+         <p class = "def"> Before delving into the study of polynomials, it's essential to understand some fundamental terms such as variables and coefficients.</p>
+
+         <div class = side-note-container>
+            <div class = "sidenote green-note">
+                <p><span style="font-weight: bold;">Variables:</span> </p>
+                <p>Variables are symbols that represent unknown or unspecified quantities. In algebraic expressions and equations, variables are often denoted by letters like  \(x, y, z\), etc.</p>
+            </div>
+
+            <div class = "sidenote green-note">
+                <p><span style="font-weight: bold;">Terms:</span> </p>
+                <p>A term is either a single number (called a constant term) or the product of a number and one or more variables.</p>
+            </div>
+            <div class = "sidenote green-note">
+                <p><span style="font-weight: bold;">Coefficients:</span> </p>
+                <p>Coefficients are the numerical factors attached to variables in algebraic expressions. So when a term is the product of a number and one or more variables, the number is called the coefficient of the term.</p>
+            </div>
+         </div>
+        
+         <p class = "example"> Example: for each expression, identify the coefficient, the variable(s), and the exponent of each variable.<br>
+            <span style="margin-right: 2%"> a) 3w </span> <span style="margin-right: 2%"> b) \(a^2\) </span>  
+            <span style="margin-right: 2%">c) \(-4xy\) </span>  <span style="margin-right: 2%"> d)\(-g\)</span></p>
+
+
+            <div class = "solution" style="display: flex;">
+                <p>
+                   <div style="margin-right: 10%">Solution: </div> 
+
+                <div style="margin-right: 2%">a) coefficient: 3 <br>
+                      variable(s): w <br>
+                       exponents of the variable: 1<br><br>
+
+                       c) coefficient: -4 <br>
+                       variable(s): x and y <br>
+                       exponents of the variable: 1 and 1</div>
+
+                <div style="margin-right: 2%">
+                            b) coefficient: 1 <br>
+                            variable(s): a <br>
+                            exponents of the variable: 2<br><br>
+                            d) coefficient: -1 <br>
+                            variable(s): g <br>
+                            exponents of the variable: 1 </div>
+                            </p>
+    
+            </div>
+
+
+            <div class = "sidenote green-note" style="margin: 2rem auto 0;">
+                <p><span style="font-weight: bold;">Degree of Terms:</span> </p>
+                <p>A degree of a term is the sum of the exponents on the variables of a single term. <br>
+                ex) \(4xy = 4x^1y^1\) so since 1 + 1 = 2,  the degree of \(4xy\) is 2. </p>
+            </div>
+        
+            <p class = "example"> Example: What is the degree of 10?<br>
+            <div class = "solution">
+                <p>Solution: <br></p>
+                <p>For every constant like 10, the degree is 0, because it can be represented as  \(10x^0\).<br>
+                (Recall that any number to the power of 0 evaluates to 1 from the Powers and Exponential Law notes)</p>
+            </div>
+
+
+            <p class = "def">Now we are ready to learn what polynomials are!</p>
+           
+            <div class = "sticky-note-yellow">
+                <p><span style="font-weight: bold;">Polynomials:</span> </p>
+                <p>A polynomial is an algebraic expression made up of terms connected by the operations of addition or substraction.</p>
+            </div>
+
+
+            <ul class = "subsubtitle">4.2 Properties of Polynomials</ul>
+            <p class = "def">Polynomials can have different numbers of terms!</p>
+
+         <div class = side-note-container>
+            <div class = "sidenote green-note">
+                <p><span style="font-weight: bold;">Monomial:</span> </p>
+                <p>A polynomial with one term.</p>
+            </div>
+
+            <div class = "sidenote green-note">
+                <p><span style="font-weight: bold;">Binomial:</span> </p>
+                <p>A polynomial with two terms.</p>
+            </div>
+            <div class = "sidenote green-note">
+                <p><span style="font-weight: bold;">Trinomial:</span> </p>
+                <p>A polynomial with three terms.</p>
+            </div>
+            <div class = "sidenote green-note">
+                <p><span style="font-weight: bold;">Polynomial:</span> </p>
+                <p>Any polynomial with one or more terms is considered a polynomial</p>
+            </div>
+         </div>
+
+         <p class = "example"> Example: for each expression, identify the number of terms and whether it is a monomial, binomial, trinomial, or polynomial<br><br>
+            <span style="margin-right: 2%"> a) \(4xy + 3\)</span> <span style="margin-right: 2%"> b) \(7a^2 - 2ab + b^2\) </span>  
+            <span style="margin-right: 2%">c) \(5x^2 + y^2 + z^2 - x - 6\) </span>  <span style="margin-right: 2%"> d) 13</span></p>
+
+
+            <div class = "solution" style="display: flex;">
+                <p>
+                   <div style="margin-right: 10%">Solution: </div> 
+
+                <div style="margin-right: 2%">a) number of terms: 2 <br>
+                      Name: binomial 
+                       <br><br>
+                       c) number of terms: 5 <br>
+                       Name: trinomial </div>
+
+                <div style="margin-right: 2%">
+                            b) number of terms: 3 <br>
+                            Name: trinomial 
+                             <br><br>
+                            d) number of terms: 1 <br>
+                            Name: monomial </div>
+                            </p>
+    
+            </div>
+
+
+            <div class = "sidenote green-note" style="margin: 2rem auto 0;">
+                <p><span style="font-weight: bold;">Degree of a polynomial:</span> </p>
+                <p>the degree of the highest-degree term in a polynomial<br>
+                 </p>
+            </div>
+            <p class = "example">Example: What is the degree of the polynomial \(2xy + 2b\)</p>
+            <div class = "solution">
+                <p>Solution: <br></p>
+                <p>
+                in \(2xy + 2b\), the degree of the first term is 2, and the degree of the second term is 1. <br> The highest degree is 2, so the degree of the polynomial is 2.
+                <br><br>Therefore, the answer is 2.</p>
+            </div>
+
+            <ul class = "subsubtitle">4.3 Ordering Polynomials: Ascending and Descending</ul>
+            
+            <div class = side-note-container style="margin-top: 8%">
+                <div class = "sidenote green-note">
+                    <p><span style="font-weight: bold;">Descending Order:</span> </p>
+                    <p>In descending order, the terms are arranged from highest degree to lowest degree. This means that the term with the highest degree of the variable is written first, followed by the next highest degree, and so on, until the term with the lowest degree, or the constant term, is written last.</p>
+                </div>
+                <div class = "sidenote green-note">
+                    <p><span style="font-weight: bold;">Ascending Order:</span> </p>
+                    <p>In ascending order, the terms are arranged from lowest degree to highest degree. This means that the term with the lowest degree of the variable is written first, followed by the next lowest degree, and so on, until the term with the highest degree is written last.</p>
+                </div>
+             </div>
+
+             <p class = "example">Example: Arrange the following polynomial in descending and ascending order: \(4x^3  - 7x + 2x^2 + 9\)</p>
+             <div class = "solution">
+                 <p>Solution: <br></p>
+                 <p>
+                 descending order: \(4x^3 + 2x^2 - 7x + 9\).
+                <br> - the terms are arranged in descending order of powers: \(4x^3\) has the highest power, followed by  \(2x^2\),  \(- 7x\),\(9\) </p>
+                 <p>
+                    ascending order: \(9 - 7x + 2x^2 + 4x^3 \).
+                    <br> - the terms are arranged in ascending order of powers: \(9\) has the lowest degree, followed by the next lowest \(- 7x\),  \(2x^2\),\(4x^3\) </p>
+
+             </div>
+
+             <ul class = "subsubtitle">4.4 Equivalent Expressions of Polynomials</ul>
+
+             <div class = "sidenote green-note" style="margin: 2rem auto 0;">
+                <p><span style="font-weight: bold;">Like terms:</span> </p>
+                <p>terms that differ only by their numerical coefficients<br>
+                    ex) 3x and -2x
+                 </p>
+
+            </div>
+            <p class = "example">Example: Are \( 4xy \) and \(3yx\) like terms?</p>
+            <div class = "solution">
+                <p>Solution: <br></p>
+                <p>Yes, \(4xy\) and \(3yx\) are like terms, because they have the same variables raised to the same powers, albeit in a different order. In algebra, the order of variables does not matter when determining if terms are like terms.<br>
+                Therefore, \(4xy\) and \(3yx\) are like terms.</p>
+            </div>
+
+            <ul class = "subsubtitle">4.5 Operations with Polynomials</ul>
+
+            <div class = side-note-container style="margin-top: 8%">
+                <div class = "sidenote green-note">
+                    <p><span style="font-weight: bold;">Adding/Subtracting Polynomials:</span> </p>
+                    <p>To add or subtract polynomials, you simply combine "like terms".</p>
+                </div>
+                <div class = "sidenote green-note">
+                    <p><span style="font-weight: bold;">Multiplying Monomials:</span> </p>
+                    <p>Multiply the coefficients, multiply the variables, and combine the results.</p>
+                </div>
+                <div class = "sidenote green-note">
+                    <p><span style="font-weight: bold;">Dividing Monomials:</span> </p>
+                    <p>Divide the coefficients, divide the variables, and combine the results.</p>
+                </div>
+             </div>
+
+             <p class = "example">Example: Evaluate: \( (3x-4) + (2x-3)\)</p>
+             <div class = "solution">
+                 <p>Solution: <br></p>
+                 <p> \( (3x-4) + (2x-3) = 3x-4 + 2x-3  = 3x + 2x - 4 - 3 = 5x - 7\)<br>
+                Therefore, \(5x - 7\).</p>
+             </div>
+
+             <p class = "example">Example: Evaluate: \( (5x)(2x)\)</p>
+             <div class = "solution">
+                 <p>Solution: <br></p>
+                 <p>  \( (5x)(2x) = (5)(2)(x)(x) = 10(x)(x) = 10x^2\) <br>
+                    Therefore, \(10x^2\).</p>
+             </div>
+
+             <p class = "example">Example: Evaluate: \( \frac{-10x^2}{2x}\)</p>
+             <div class = "solution">
+                 <p>Solution: <br></p>
+                 <p> \( \frac{-10x^2}{2x} = \frac{-5x^2}{x} = -5x^{2-1} = -5x \) <br>
+                    Therefore, \(-5x\).</p>
+             </div>
+
+
+             <div class = side-note-container>
+                <div class = "sidenote green-note">
+                    <p><span style="font-weight: bold;">Multiplying a Binomial by a Monomial:</span> </p>
+                    <p>follows the distributive property, which states that when you multiply a number (or term) by a sum (or difference) inside parentheses, you distribute the number (or term) to each term inside the parentheses.</p>
+                </div>
+                <div class = "sidenote green-note">
+                    <p><span style="font-weight: bold;">Dividing a Binomial by a Monomial:</span> </p>
+                    <p>Dividing a binomial by a monomial involves dividing each term of the binomial by the monomial.</p>
+                </div>
+             </div>
+
+             <p class = "example">Example: Evaluate: \((3x + 2) \times 4 \)</p>
+             <div class = "solution">
+                 <p>Solution: <br></p>
+                 <p> \((3x + 2) \times 4 = (4 \times 3x) + (2 \times 4) = 12x + 8\) <br>
+                    Therefore, 12x + 8.</p>
+             </div>
+
+             <p class = "example">Example: Evaluate: \( \frac{3x^2 + 6x}{3}\)</p>
+             <div class = "solution">
+                 <p>Solution: <br></p>
+                 <p> \( \frac{3x^2 + 6x}{3} =  \frac{3x^2}{3} +  \frac{6x}{3} = x^2 +  2x\) <br>
+                    Therefore, \(x^2 +  2x\).</p>
+             </div>
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+       </div>
+
+
+
+
     
 </body>
 </html>

@@ -151,6 +151,10 @@ margin-bottom: 2rem;
     --note-marker-color: rgba(255, 0, 0, 0.45);
 }
 
+.green-note{
+    --note-bg-color: #9bfdce ;
+    --note-marker-color: rgba(116,237,75, 0.45);
+}
 
 .side-note-container {
     display: flex;
